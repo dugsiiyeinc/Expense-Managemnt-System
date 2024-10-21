@@ -119,7 +119,7 @@ users.push(user)
 
 localStorage.setItem("users", JSON.stringify(users));
 
-Window.location.href='../html/login.html';
+window.location.href='../html/login.html';
 
 
 
