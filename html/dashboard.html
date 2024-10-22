@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <h2>Abdale Gurey</h2>
+        <ul>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="income.html">Income</a></li>
+            <li><a href="expanse.html">Expanse</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <div class="header-right">
+                <span><a href="#" style="text-decoration: none;" id="logout"> Logout</a></span>
+               
+            </div>
+        </header>
+
+        <!-- stats Section -->
+        <div class="stats" style="padding: 20px;">
+           
+            <div class="stats-box" style="padding: 30px;">
+                <h3 style="margin-bottom: 30px;">Total Income</h3>
+                <p id="totalincome">0</p>
+            </div>
+
+          
+            <div class="stats-box" style="padding: 30px;">
+                <h3 style="margin-bottom: 30px;">Total Expenses</h3>
+                <p>0</p>
+            </div>
+
+         
+            <div class="stats-box" style="padding: 30px;">
+                <h3 style="margin-bottom: 30px;">Balance</h3>
+                <p>0</p>
+            </div>
+        </div>
+
+       
+        
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  
+   
+</body>
+</html>
