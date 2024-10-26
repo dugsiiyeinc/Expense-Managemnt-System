@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Income</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/expense.css"> 
+    
+</head>
+<body>
+   
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <h2 class="user"></h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="income.html" class="active">Income</a></li>
+            <li><a href="expense.html">Expanse</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <!-- <li><a href="#" id="logout">Logout</a></li> -->
+            <button id="logout">Logout</button>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <div class="header-right">
+                <button id="logout">Logout</button>
+              
+            </div>
+        </header>  
+        
+          <div class="container">
+            <div class="container-form">
+                <h2>Add Expenses</h2>
+                <form id="form">
+                    
+                    <div class="form-group">
+                        <label for="expenseName">Category:</label>
+                        <input type="text" id="expenseName" name="expenseName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expenseAmount">Amount ($):</label>
+                        <input type="number" id="expenseAmount" class="expenseAmount" name="expenseAmount"  min="0" step="">
+                    </div>
+    
+                   
+                    <div class="form-group">
+                        <label for="expenseDate">Date Expense:</label>
+                        <input type="date" id="expenseDate" class="expenseDate" name="expenseDate">
+                    </div>
+    
+                   
+                   
+    
+                    
+                    <div class="form-group">
+                        <button type="submit" id="addExpense">Add Expense</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-data">
+            <table>
+                <h1 id="userCurent">User</h1>
+                <tr>
+                    <th>Expense ID</th>
+                    <th>category</th>
+                    <th>Amount</th>
+                    <th>expenseDate</th>
+                   
+                </tr>
+              
+                <tbody id="tbody">
+                   
+                   
+                </tbody>
+              
+                  
+                          
+                                   
+                                               
+                                                            
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+
+  
+
+
+   
+   
+
+    
+
+  
+   
+    <script src="../js/expense.js"></script> 
+     <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
