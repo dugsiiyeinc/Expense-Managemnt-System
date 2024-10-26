@@ -7,16 +7,17 @@ loginForm.addEventListener('submit', (event)=>{
     event.preventDefault();
 
 
-    // const emails= JSON.parse(localStorage.getItem('email')) || [];
-    // const email = emails.find(eml => eml.email === email.value && eml.password === password.value);
+    const users = JSON.parse(localStorage.getItem("users"));
 
-    const users= JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(usr => usr.email === email.value && usr.password === password.value);
 
-    if(!email){
+    if(!user){
         alert('invalid credential');
         return;
     }
 
-    window.location.href = "../html/.dashboard.html";
+    console.log(user.fullname);
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    window.location.href = "../html/dashboard.html";
 })
