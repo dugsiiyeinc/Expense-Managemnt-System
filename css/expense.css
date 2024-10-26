@@ -1,0 +1,81 @@
+.container{
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.container-form{
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow :0px  2px 5px rgba(0,0,0,0.4);
+}
+h2{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  
+}
+.form-group{
+    margin-bottom: 20px;
+}
+
+input{
+    width:80%;
+    padding: 8px;
+    border: none;
+    outline:none;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-left: 12px;
+
+}
+
+#addExpense{
+    background-color: rgb(8, 152, 8);
+    border: none;
+    padding: 15px 10px;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#logout{
+    background-color: whitesmoke;
+    color: #000;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.table-data{
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+}
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color:rgba(8, 152, 8,0.8);
+}
+tr:hover{
+    background-color: rgba(89, 195, 9, 0.7);
+
+    box-shadow: opx 5px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+    
