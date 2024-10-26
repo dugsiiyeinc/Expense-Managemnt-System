@@ -1,11 +1,10 @@
 const menuToggle = document.getElementById('menu-toggle');
 const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');
+
 const userName = document.querySelector(".user")
 let totalincome= document.querySelector("#totalincome");
 let totalExpenses= document.querySelector("#totalExpenses");
-console.log("totalincome")
-console.log("totalExpenses")
 let onlineUser = JSON.parse(localStorage.getItem("currentUser")) || null;
 console.log(userName)
 userName.textContent = onlineUser.fullname;
@@ -14,6 +13,7 @@ let AllExpenseUsers = JSON.parse(localStorage.getItem("allExpenseData")) ||{};
 
 let incomeOnlineuser= AllincomeUsers[onlineUser.fullname];
 let expenseOnlineuser= AllExpenseUsers[onlineUser.fullname];
+
 
 
 
@@ -28,6 +28,7 @@ incomeOnlineuser.forEach(element => {
         return valuenumber = valuenumber + index;
     })
    totalincome.textContent = `$${sum}`
+
 })
 
    
@@ -45,6 +46,7 @@ incomeOnlineuser.forEach(element => {
 })
 
 
+
 // 
 menuToggle.addEventListener('click', () => {
     // sidebar.classList.remove('close')
@@ -57,16 +59,15 @@ closeBtn.addEventListener('click', () => {
 });
 
 
+
 const logouts = document.querySelectorAll("#logout");
-console.log(logouts);
 logouts.forEach(logout => {
     logout.addEventListener("click", () =>{
-   
-        console.log("welcome")
          localStorage.removeItem("currentUser");
          window.location.href="../html/login.html"
     })
 })
+
 
 
 

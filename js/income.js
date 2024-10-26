@@ -6,17 +6,15 @@ const incomedate= document.querySelector("#income-date");
 
 
 let users=JSON.parse(localStorage.getItem("users")) || [];
+
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
-// console.log(currentUser);
-//console.log(AllincomeData)
 
 console.log(form)
 let userCurent = document.querySelector("#userCurent");
 console.log("currentUser");
-// userCurent ? currentUser.fullname :  window.location.href="../html/login.html";
-// if(!userCurent) return window.location.href="../html/login.html";
     userCurent.textContent =`User: ${currentUser.fullname}` 
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     if(incomeSource.value ==='' || incomeamount.value === '' || incomedate.value === ''){
@@ -114,16 +112,15 @@ incomeamount.value = "";
  });
 
 
- const logouts = document.querySelectorAll("#logout");
+const logouts = document.querySelectorAll("#logout");
 console.log(logouts);
 logouts.forEach(logout => {
-    logout.addEventListener("click", () =>{
-   
-        console.log("welcome")
+    logout.addEventListener("click", () => {
          localStorage.removeItem("currentUser");
          window.location.href="../html/login.html"
     })
 })
+
 
 
 

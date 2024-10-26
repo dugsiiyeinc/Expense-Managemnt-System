@@ -119,6 +119,8 @@ users.push(user)
 
 localStorage.setItem("users", JSON.stringify(users));
 
+window.location.href='../html/login.html';
+
 
 
 })
