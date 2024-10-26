@@ -1,14 +1,19 @@
 const menuToggle = document.getElementById('menu-toggle');
 const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');
-let totalincome= document.querySelector("#totalincome");
-console.log(totalincome)
-let onlineUser= JSON.parse(localStorage.getItem("Currentuser")) || null;
 
-console.log(onlineUser);
+const userName = document.querySelector(".user")
+let totalincome= document.querySelector("#totalincome");
+let totalExpenses= document.querySelector("#totalExpenses");
+let onlineUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+console.log(userName)
+userName.textContent = onlineUser.fullname;
 let AllincomeUsers = JSON.parse(localStorage.getItem("allIncomeData")) ||{};
+let AllExpenseUsers = JSON.parse(localStorage.getItem("allExpenseData")) ||{};
 
 let incomeOnlineuser= AllincomeUsers[onlineUser.fullname];
+let expenseOnlineuser= AllExpenseUsers[onlineUser.fullname];
+
 
 
 
@@ -24,9 +29,22 @@ incomeOnlineuser.forEach(element => {
     })
    totalincome.textContent = `$${sum}`
 
+})
+
    
-   
-});
+   //User Total expanses
+   let arrayExpense=[]
+   expenseOnlineuser.forEach(element => {
+       let userexpense= Number(element.amount)
+       arrayExpense.push(userexpense)
+       console.log(arrayExpense)
+       let sum= arrayExpense.reduce(function(value, index){
+           let valuenumber= Number(value)
+           return valuenumber = valuenumber + index;
+       })
+      totalExpenses.textContent = `$${sum}` 
+})
+
 
 
 // 
@@ -41,14 +59,16 @@ closeBtn.addEventListener('click', () => {
 });
 
 
-let logout = document.querySelector("#logout");
-console.log(logout)
-logout.addEventListener("click", ()=>{
-   
-    console.log("welcome")
-     localStorage.removeItem("Currentuser");
-     window.location.href="../html/login.html"
+
+const logouts = document.querySelectorAll("#logout");
+logouts.forEach(logout => {
+    logout.addEventListener("click", () =>{
+         localStorage.removeItem("currentUser");
+         window.location.href="../html/login.html"
+    })
 })
+
+
 
 
 

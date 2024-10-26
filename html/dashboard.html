@@ -11,14 +11,15 @@
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" id="close-btn">&times;</button>
-        <h2>Abdale Gurey</h2>
+      
+        <h2 class="user"></h2>
         <ul>
             <li><a href="dashboard.html" class="active">Dashboard</a></li>
             <li><a href="income.html">Income</a></li>
-            <li><a href="expanse.html">Expanse</a></li>
+            <li><a href="expense.html">Expanse</a></li>
             <li><a href="report.html">Report</a></li>
             <li><a href="settings.html">Settings</a></li>
-            <li><a href="#" id="logout">Logout</a></li>
+            <button id="logout">Logout</button>
         </ul>
     </div>
 
@@ -27,8 +28,7 @@
         <header>
             <button class="menu-toggle" id="menu-toggle">&#9776;</button>
             <div class="header-right">
-                <span><a href="#" style="text-decoration: none;" id="logout"> Logout</a></span>
-               
+                <button id="logout">Logout</button>               
             </div>
         </header>
 
@@ -43,7 +43,8 @@
           
             <div class="stats-box" style="padding: 30px;">
                 <h3 style="margin-bottom: 30px;">Total Expenses</h3>
-                <p>0</p>
+
+                <p id="totalExpenses">0</p>
             </div>
 
          
