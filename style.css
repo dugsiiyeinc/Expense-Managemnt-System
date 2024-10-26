@@ -6,11 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ body,html{
+    overflow-x: hidden;
+} 
 body{
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
-    color:#333;
+    color:whitesmoke;
     background-color: #f4f4f4;
 }
 header{
@@ -22,9 +24,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     background-color:  #007bff;
-    color: white;
+    color: whitesmoke;
+   
     
 }
 .navbar .logo{
@@ -42,14 +45,15 @@ button
 { 
     margin-left: 10PX;
     border: none;
-    border-radius: 10PX;
+    border-radius: 15px;
     padding: 10px;
     width: 90px;
 }
 button a{
     color: black;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
+    font-weight: bold;
     
 }
 
@@ -66,36 +70,270 @@ button a:hover{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
     text-align: center;
-    /* background-image: url(https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=600); */
-    background-image: url('./img/background.webp');
-    
+    /* background-image: url(https://images.pexls.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=600); */
+    background-image: url(./img/background.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    /* background-color: rgba(0, 35, 82,0.7); */
     color:black;
+    
 }
 .hero h1{
     font-size: 3rem;
     margin-bottom: 2rem;
     
+    
 }
 .hero p{
+    
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    font-weight: bold;
+    color: black;
+    /* color:#2b3239; */
     
+
 }
 .cta-button{
     padding: 0.75rem;
     background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 1rem;
 }
 
+section{
+    width:80% ;
+    margin: 80px auto;
+
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}  
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row .col #img1{
+    width: 85%;
+}
+.row .col #img2{
+    width: 80%;
+}
+.about .row{
+    margin-top: 50px;
+}
+.col h4{
+    font-size: 3vmin;
+    color:#484872;
+    margin: 20px auto;
+
+}
+ .col p{
+    color:#7c7c7c;
+    padding: 0px 40px;
+}
+.about .ctn{
+    margin-top: 30px;
+}
+.ctn{
+    padding: 8px 15px;
+    background-color: #007bff;
+    border-radius: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+.explore{
+    width: 100%;
+    height: 80vh;
+    background-image: url('https://img.freepik.com/free-vector/financial-management-isometric-composition-with-3d-budget-planning-money-symbols-dark-background-vector-illustration_1284-73166.jpg?t=st=1729603699~exp=1729607299~hmac=813cb7446a8c4237c69619d8bcf22215f69bab3ef3452384fcb51fa0756b0e4a&w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.explore-content{
+    width: 50%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.explore-content h1{
+    font-size: 7vmin;
+    margin: 50px;
+    text-transform: uppercase;
+
+}
+.explore-content p{
+    color: rgb(221, 221, 221);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.explore-content .ctn{
+    margin-top: 40px;
+   
+}
+.content-col{
+    width: 40%;
+}
+.image-col{
+    width: 60%;
+
+}
+.charts .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.image-gallery img{
+   max-width: 400px;
+   
+}
+.content-col h1{
+    font-size: 5vmin;
+    color: #484872;
+    margin-left: -50px;
+}
+.content-col p{
+    padding: 0;
+    margin:30px auto ;
+    margin-left: -50px;
+}
+.content-col .ctn{
+    margin-left: -100px;
+}
 footer{
-    background-color:  #007bff; 
+    background-color:#007bff; 
+    color: whitesmoke;
     text-align: center;
     padding: 1rem 2rem;
+    font-size: 1.2rem;
+    
+}
+/* .menu-btn{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    width: 100px;
+    cursor: pointer;
+ 
+    
+} */
+
+@media only screen  and (max-width:500px){
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+     }
+
+
+
+}
+
+@media only screen  and (max-width:850px){
+    /* .navbar{
+     
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left:30px;
+        color: black;
+    }
+      button{
+        flex-direction:row;
+        width: 100%;
+        /* height: 100vh; */
+        /* justify-content:center;
+        /* background-color: #484872; */
+        /* margin-top:-900px; */
+    /* } 
+    /* .mobile-menu{
+        margin-top: 0px;
+    }
+     button {
+        margin: 30px auto;
+    } */ */ */ */ */
+
+     ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+     }
+
+
+
+    .row{
+        flex-direction: column;
+    }
+    .row .col{
+        margin: 20px auto;
+    }
+    .col img{
+        max-width: 90%;
+    }
+    .explore-content{
+        width: 100%;
+    }
+    .charts .col{
+        width: 100%;
+    }
+    .image-gallery{
+        justify-content: center;
+        align-items: center;
+    }
+    #ctn{
+        margin-bottom: -100px;
+    }
+    
+    }
+    
+
+
+
+img{
+    transition: 0.3s ease;
+}
+img:hover{
+  
+    transform: scale(1.1);
+}
+
+
+.ctn:hover{
+    background: whitesmoke;
+    color: #007bff;
+    box-shadow: 2px 2px 5px #00000056;
 }
