@@ -1,0 +1,49 @@
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+   
+}
+
+.btn-yearly, .btn-Monthly, .btn-daily{
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+
+/* table csss  data*/
+.table-data{
+
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:hover{
+    background-color: rgba(255, 255, 102, 0.7);
+
+    box-shadow: opx 5px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-data{
+    margin-bottom: 300px;
+}
