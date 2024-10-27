@@ -63,7 +63,7 @@ localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
     expenseDate.value= "";
 
 
-    AddDom(allExpenseData );
+    AddDom(allExpenseData);
 
 
 
