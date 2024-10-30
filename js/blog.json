@@ -1,0 +1,92 @@
+
+
+ [
+    
+    {
+        "image": "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=600",
+        
+
+
+    "title": "Managing Your Finances Effectively: Income, Balance, and Expenses",
+ 
+
+    "date-info":{
+        "date": "October 30, 2024",
+        "comments": "5"
+
+    },
+
+    "description": "Income is the money you earn or receive from various sources, including salaries, freelance projects, investments, or side gigs. Monitoring your income regularly helps you understand your earning potential and makes budgeting easier. A common mistake people make is not diversifying their income streams. By exploring multiple income avenues, you can build a more stable and resilient financial foundation"
+
+
+
+},
+{
+    "image": "https://images.pexels.com/photos/6963017/pexels-photo-6963017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "The Power of Savings: How to Save for Your Future",
+    "date-info": {
+        "date": "November 15, 2024",
+        "comments": "10"
+    },
+    "description": "Savings are the money you put aside to save for a future goal or to pay off debt. By setting aside a portion of your income for savings, you can increase your financial security and reduce the risk of financial instability. Additionally, saving can help you achieve your financial goals faster by reducing the time it takes to accumulate the desired amount of money"
+},
+
+{
+    "image": "https://images.pexels.com/photos/1082464/pexels-photo-1082464.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "title": "Tips for Balancing Income and Expenses: A Simple Guide",
+    "date-info": {
+        "date": "December 10, 2024",
+        "comments": "8"
+    },
+    "description": "Balancing income and expenses is essential for maintaining a healthy financial situation. By understanding your income and expenses, you can make informed decisions about what to save, invest, or spend to achieve your financial goals"
+},
+
+{
+    "image": "https://images.pexels.com/photos/16282306/pexels-photo-16282306/free-photo-of-a-person-using-a-calculator.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "The Importance of Debt Management: How to Pay Off Your Debt Effectively",
+    "date-info": {
+        "date": "January 15, 2025",
+        "comments": "12"
+    },
+    "description": "Debt is the money you owe to others, such as your parents, credit card companies, or banks. By understanding the importance of debt management, you can make informed decisions about how to pay off your debts to achieve your financial goals"
+},
+
+{
+    "image": "https://images.pexels.com/photos/8927687/pexels-photo-8927687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "The Power of Retirement Savings: How to Build a Long-Term Financial Plan",
+    "date-info": {
+        "date": "February 20, 2025",
+        "comments": "6"
+    },
+    "description": "Retirement is the time when you can no longer work and save for your future. By understanding the importance of retirement savings, you can make informed decisions about how to build a long-term financial plan to achieve your financial goals"
+},
+
+{
+    "image": "https://images.pexels.com/photos/5466806/pexels-photo-5466806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "The Key to Maintaining Financial Health",
+    "date-info": {
+        "date": "March 15, 2025",
+        "comments": "15"
+    },
+    "description": "Expenses are the money you spend on necessities and luxuries, from bills and groceries to entertainment and travel. While expenses are unavoidable, keeping them in check is essential for healthy finances. Categorize your spending into essentials and non-essentials to identify areas for potential savings."
+},{
+    "image": "https://images.pexels.com/photos/127368/pexels-photo-127368.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "title": "The Power of Compound Interest: How to Earn More Money Over Time",
+    "date-info": {
+        "date": "April 20, 2025",
+        "comments": "4"
+    },
+    "description": "Compound interest is the process of earning interest on the initial amount of money, including interest from previous periods. By understanding the importance of compound interest, you can make informed decisions about how to earn more money over time"
+},
+{
+    "image": "https://images.pexels.com/photos/4386365/pexels-photo-4386365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "Staying Aware of Your Net Worth",
+    "date-info": {
+        "date": "May 15, 2025",
+        "comments": "10"
+    },
+    "description": "Balance is the difference between your total assets and liabilities. Knowing your balance helps you understand your financial worth and plan accordingly. Keeping a close watch on your balance can prevent unnecessary overspending and keep you on track toward your financial goals."
+}
+
+
+]
