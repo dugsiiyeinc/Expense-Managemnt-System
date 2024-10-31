@@ -17,6 +17,14 @@ Markii hore ujeedku wuxuu ahaa in lagu tijaabiyo  kooras Afsommali ku baxaya oo 
 
 This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
 
+## Technologies used
+
+- HTML
+- CSS
+- JavaScript
+- API INTERGRATION
+  
+
 ## Talaabooyinka aad wax ugu dari kartid project-gan
 
   - Ugu horayn Fork dheh adigoo xaga sare ee geeska midig ku arkaya calaamada fargeetadda.
