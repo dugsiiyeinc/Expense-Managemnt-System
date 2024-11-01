@@ -6,8 +6,16 @@ const incomedate= document.querySelector("#income-date");
 
 
 let users=JSON.parse(localStorage.getItem("users")) || [];
+let user= document.querySelector(".user")
 
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
+if(!currentUser){
+    alert("No user is currently logged in");
+    return;
+}else{
+    userCurent.textContent =currentUser.fullname;
+
+}
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
 
 console.log(form)
