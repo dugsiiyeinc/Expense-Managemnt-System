@@ -4,6 +4,13 @@ let tbody= document.querySelector("#tbody");
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
 let AllexpenseUser= JSON.parse(localStorage.getItem("allExpenseData")) || {};
 let onlineUsers= JSON.parse(localStorage.getItem("currentUser")) || [];
+let user= document.querySelector(".user")
+if(!onlineUsers){
+    alert("No user is currently logged in");
+    return;
+}else{
+    user.innerHTML=onlineUsers.fullname;
+}
 let incomeuserOnline= allIncomeData[onlineUsers.fullname] || [];
 
 let expenseuserOnline= AllexpenseUser[onlineUsers.fullname] || [];

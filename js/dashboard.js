@@ -6,8 +6,14 @@ const userName = document.querySelector(".user")
 let totalincome= document.querySelector("#totalincome");
 let totalExpenses= document.querySelector("#totalExpenses");
 let onlineUser = JSON.parse(localStorage.getItem("currentUser")) || null;
-console.log(userName)
-userName.textContent = onlineUser.fullname;
+// console.log(userName)
+//userName.textContent = onlineUser.fullname;
+if(!onlineUser){
+    window.location.href="../html/login.html";
+    // return;
+}else{
+    userName.textContent =onlineUser.fullname
+}
 let AllincomeUsers = JSON.parse(localStorage.getItem("allIncomeData")) ||{};
 let AllExpenseUsers = JSON.parse(localStorage.getItem("allExpenseData")) ||{};
 
@@ -69,6 +75,11 @@ logouts.forEach(logout => {
 })
 
 
+// if(!onlineUser) return window.location.href="../html/login.html";
+
+if(!onlineUser){
+    console.log("welcome login")
+}
 
 
 
