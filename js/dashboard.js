@@ -23,37 +23,41 @@ let expenseOnlineuser= AllExpenseUsers[onlineUser.fullname];
 
 
 
+
 //User Total Income
 let arrayIncome=[]
+let totalIncome;
 incomeOnlineuser.forEach(element => {
     let userincome= Number(element.amount)
     arrayIncome.push(userincome)
     console.log(arrayIncome)
-    let sum= arrayIncome.reduce(function(value, index){
+    totalIncome = arrayIncome.reduce(function(value, index){
         let valuenumber= Number(value)
         return valuenumber = valuenumber + index;
     })
-   totalincome.textContent = `$${sum}`
-
+    
+   totalincome.textContent = `$${totalIncome}`
 })
 
    
    //User Total expanses
    let arrayExpense=[]
+   let totalExpense;
    expenseOnlineuser.forEach(element => {
        let userexpense= Number(element.amount)
        arrayExpense.push(userexpense)
        console.log(arrayExpense)
-       let sum= arrayExpense.reduce(function(value, index){
+       totalExpense = arrayExpense.reduce(function(value, index){
            let valuenumber= Number(value)
            return valuenumber = valuenumber + index;
        })
-      totalExpenses.textContent = `$${sum}` 
+      totalExpenses.textContent = `$${totalExpense}`
 })
+//balance
 
+    document.getElementById('balance').textContent = `$${totalIncome - totalExpense}`;
 
-
-// 
+ 
 menuToggle.addEventListener('click', () => {
     // sidebar.classList.remove('close')
     sidebar.classList.add('open');

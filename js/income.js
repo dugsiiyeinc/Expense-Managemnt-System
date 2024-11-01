@@ -2,6 +2,7 @@ const form= document.querySelector("#form");
 const incomeamount = document.querySelector("#income-amount");
 const incomeSource = document.querySelector("#income-name");
 const incomedate= document.querySelector("#income-date");
+let userCurent = document.querySelector("#userCurent");
 
 
 
@@ -11,15 +12,13 @@ let user= document.querySelector(".user")
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
 if(!currentUser){
     alert("No user is currently logged in");
-    return;
 }else{
-    userCurent.textContent =currentUser.fullname;
+   userCurent.textContent =currentUser.fullname;
 
 }
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
 
 console.log(form)
-let userCurent = document.querySelector("#userCurent");
 console.log("currentUser");
     userCurent.textContent =`User: ${currentUser.fullname}` 
 
