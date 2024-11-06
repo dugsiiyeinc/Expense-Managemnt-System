@@ -16,6 +16,7 @@ if(!currentUser){
   
 }else{
    userCurent.textContent = currentUser.fullname;
+   user.textContent= currentUser.fullname;
 
 
 }
