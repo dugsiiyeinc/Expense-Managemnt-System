@@ -1,8 +1,18 @@
 let tbody= document.querySelector("#tbody");
 
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
-let AllexpenseUser= JSON.parse(localStorage.getItem("AllexpenseUser")) || {};
-let onlineUsers= JSON.parse(localStorage.getItem("Currentuser")) || [];
+
+let AllexpenseUser = JSON.parse(localStorage.getItem("allExpenseData")) || {};
+let onlineUsers = JSON.parse(localStorage.getItem("currentUser")) || [];
+let user = document.querySelector(".user")
+if(!onlineUsers){
+    window.location.href="../html/login.html";
+}else{
+    user.innerHTML=onlineUsers.fullname;
+}
+
+
+
 let incomeuserOnline= allIncomeData[onlineUsers.fullname] || [];
 
 let expenseuserOnline= AllexpenseUser[onlineUsers.fullname] || [];

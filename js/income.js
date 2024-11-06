@@ -11,9 +11,12 @@ let user= document.querySelector(".user")
 
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
 if(!currentUser){
-    alert("No user is currently logged in");
+
+  window.location.href = "../html/login.html";
+  
 }else{
-   userCurent.textContent =currentUser.fullname;
+   userCurent.textContent = currentUser.fullname;
+
 
 }
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
