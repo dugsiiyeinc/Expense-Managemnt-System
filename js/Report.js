@@ -6,8 +6,7 @@ let AllexpenseUser= JSON.parse(localStorage.getItem("allExpenseData")) || {};
 let onlineUsers= JSON.parse(localStorage.getItem("currentUser")) || [];
 let user= document.querySelector(".user")
 if(!onlineUsers){
-    alert("No user is currently logged in");
-    return;
+    window.location.href="../html/login.html";
 }else{
     user.innerHTML=onlineUsers.fullname;
 }

@@ -17,7 +17,7 @@ if(!onlineUser){
 let AllincomeUsers = JSON.parse(localStorage.getItem("allIncomeData")) ||{};
 let AllExpenseUsers = JSON.parse(localStorage.getItem("allExpenseData")) ||{};
 
-let incomeOnlineuser= AllincomeUsers[onlineUser.fullname];
+let incomeOnlineuser= AllincomeUsers[onlineUser.fullname] || [];
 let expenseOnlineuser= AllExpenseUsers[onlineUser.fullname];
 
 
@@ -43,7 +43,7 @@ incomeOnlineuser.forEach(element => {
    expenseOnlineuser.forEach(element => {
        let userexpense= Number(element.amount)
        arrayExpense.push(userexpense)
-       console.log(arrayExpense)
+      // console.log(arrayExpense)
        let sum= arrayExpense.reduce(function(value, index){
            let valuenumber= Number(value)
            return valuenumber = valuenumber + index;
