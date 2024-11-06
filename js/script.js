@@ -11,11 +11,20 @@ loginForm.addEventListener('submit', (event)=>{
 
     const user = users.find(usr => usr.email === email.value && usr.password === password.value);
 
+    // if(!user){
+    //     alert('invalid credential');
+    //     return;
+    // }
+
     if(!user){
-        alert('invalid credential');
+        Swal.fire({
+            title: "Error!",
+            text: "Please fill in all fields!",
+            icon: "error",
+            confirmButtonText: "Try again"
+          });
         return;
     }
-
     console.log(user.fullname);
     localStorage.setItem("currentUser", JSON.stringify(user));
 

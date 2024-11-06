@@ -2,18 +2,27 @@
 const expenseName = document.querySelector("#expenseName");
 const expenseAmount = document.querySelector("#expenseAmount");
 const expenseDate = document.querySelector("#expenseDate");
+let user = document.querySelector(".user");
+let userCurent = document.querySelector("#userCurent");
 
 const form= document.querySelector("#form");
+let CurrentUser= JSON.parse(localStorage.getItem("currentUser")) || {};
 
 
 let users=JSON.parse(localStorage.getItem("users")) || [];
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
+if(!currentUser){
+    alert("No user is currently logged in");
+}else{
+   userCurent.textContent =currentUser.fullname;
+
+}
 let allExpenseData = JSON.parse(localStorage.getItem("allExpenseData")) || {};
-// console.log(currentUser);
+console.log(currentUser);
 //console.log(AllincomeData)
 
 console.log(form)
-let userCurent = document.querySelector("#userCurent");
+// let userCurent = document.querySelector("#userCurent");
 console.log("currentUser");
 // userCurent ? currentUser.fullname :  window.location.href="../html/login.html";
 // if(!userCurent) return window.location.href="../html/login.html";
@@ -31,10 +40,17 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-if (!currentUser || !currentUser.fullname) {
-    alert("No user is currently logged in");
-    return;
-}
+    if(!currentUser){
+        alert("No user is currently logged in");
+          return;
+    }
+    // else{
+    //     userCurent.textContent=currentUser.fullname;
+    // }
+// if (!currentUser || !currentUser.fullname) {
+//     alert("No user is currently logged in");
+//     return;
+// }
 
 
 const newExpense = {
@@ -44,31 +60,101 @@ const newExpense = {
 };
 
 
-const allExpenseData = JSON.parse(localStorage.getItem("allExpenseData")) || {};
-const userExpenseDate = allExpenseData [currentUser.fullname] || [];
+//  // income of user;
+// let income= JSON.parse(localStorage.getItem("allIncomeData")) || {};
+// let incomeUser= income[CurrentUser.fullname] || [];
+// // const allExpenseData = JSON.parse(localStorage.getItem("allExpenseData")) || {};
+// // const userExpenseDate = allExpenseData [currentUser.fullname] || [];
 
-// console.log("waa usericome",userIncomeData)
+// let sumIncome=[];
+// let sum= null;
 
-
-    userExpenseDate.push(newExpense);
-
-console.log("waaa allExpensedata", allExpenseData[currentUser.fullname])
-allExpenseData[currentUser.fullname] =  userExpenseDate;
-
-
-
-localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
-    expenseAmount.value= "";
-    expenseName.value = "";
-    expenseDate.value= "";
-
-
-    AddDom(allExpenseData);
+// incomeUser.forEach(element => {
+//    let incomeAmount= Number(element.amount);
+//    sumIncome.push(incomeAmount);
+//    console.log("sumincome", sumIncome);
+//     sum= sumIncome.reduce(function(value, index){
+    
+//    return value + index;
+   
+// })
 
 
+let income= JSON.parse(localStorage.getItem("allIncomeData")) || {};
+    let incomeUser= income[CurrentUser.fullname] || [];
+
+
+    let sumIncome=[];
+    let sum= null;
+
+    incomeUser.forEach(element => {
+       let incomeAmount= Number(element.amount);
+       sumIncome.push(incomeAmount);
+       console.log("sumincome", sumIncome);
+        sum= sumIncome.reduce(function(value, index){
+        
+       return value + index;
+       
+    })
+
+
+
+});
+
+
+if(expenseAmount.value > sum){
+    Swal.fire({
+        title: "Error!",
+        text: "Not enough income to cover this expense!",
+        icon: "error",
+        confirmButtonText: "Try again"
+      });
+      expenseName.value = "";
+      expenseAmount.value = "";
+      expenseDate.value = "";
+     
+
+       return;
+   }
+   else{
+
+ 
+   // console.log(Sumexpense)
+
+
+        let allExpenseData= JSON.parse(localStorage.getItem("allExpenseData")) || {};
+        let userExpenseDate= allExpenseData[CurrentUser.fullname] ||[];
+        userExpenseDate.push(newExpense );
+        allExpenseData[CurrentUser.fullname]= userExpenseDate;
+    
+    
+        localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
+         expenseAmount.value= "";
+         expenseName.value = "";
+         expenseDate.value= "";
+        
+        
+         AddDom(allExpenseData);
+        
+    
+    //    localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
+    
+    //    AddExpenseDom(allExpenseData);
+    //     expenseName.value = "";
+    //     expenseAmount.value = "";
+    //     expenseDate.value = "";
+
+    }
 
  });
 
+//  localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
+//  expenseAmount.value= "";
+//  expenseName.value = "";
+//  expenseDate.value= "";
+
+
+//  AddDom(allExpenseData);
 
 
 
@@ -116,7 +202,7 @@ localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
     
     AddDom(allExpenseData)
  });
-
+ 
 
  const logouts = document.querySelectorAll("#logout");
 console.log(logouts);
@@ -128,22 +214,3 @@ logouts.forEach(logout => {
          window.location.href="../html/login.html"
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
