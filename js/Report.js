@@ -52,6 +52,7 @@ function helidincome(){
         //console.log(income);
         let incomeDate = new Date(income.date)
         let formattedIncomeDate = incomeDate.toISOString().split('T')[0];
+        tbody.innerHTML='';
         ///console.log(formattedIncomeDate);
 
        //let todaycorrect= income.date.split("-")[2];
@@ -86,6 +87,7 @@ function helidexpense(){
        // console.log("expense waa", expense)
        let ExpenseDate = new Date(expense.date)
        let formattedExpenseDate = ExpenseDate.toISOString().split('T')[0];
+       tbodyExpense.innerHTML='';
 
         if(formattedToday  == formattedExpenseDate){
            // console.log("expense", expense.date)
