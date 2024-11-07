@@ -135,7 +135,22 @@ incomeamount.value = "";
     AddDom(allIncomeData)
  });
 
+ function deleteIncome(income){
+    const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income);
+    
+let allIncomeDatadelete = JSON.parse(localStorage.getItem('allIncomeData')) || {};
+let incomefilter = allIncomeDatadelete[currentUser.fullname].filter(item => item.id!== income);
 
+allIncomeDatadelete[currentUser.fullname] = incomefilter;
+
+localStorage.setItem('allIncomeData', JSON.stringify(allIncomeDatadelete));
+
+AddDom(allIncomeDatadelete);
+
+
+console.log("incomefilter",incomefilter)
+
+ }
 
 
  function EditIncome(income) {
