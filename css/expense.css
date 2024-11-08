@@ -18,18 +18,29 @@ h2{
   
 }
 .form-group{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 input{
-    width:80%;
-    padding: 8px;
+    width: 70%;
+    padding: 7px;
     border: none;
-    outline:none;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
     border-radius: 5px;
-    margin-left: 12px;
+   
+   
+   
+}
 
+label{
+    width: 14%;
+}
+#expenseName{
+    margin-left: 28px;
+}
+#expenseAmount{
+    margin-left: 15px;
 }
 
 #addExpense{
@@ -42,6 +53,14 @@ input{
     cursor: pointer;
 }
 
+.edit, .delete{
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+    background-color: green;
+    padding: 10px 15px;
+    font-size: 15px;
+}
 #logout{
     background-color: whitesmoke;
     color: #000;
