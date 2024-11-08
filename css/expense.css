@@ -46,12 +46,14 @@ label{
 #addExpense{
     background-color: rgb(8, 152, 8);
     border: none;
-    padding: 15px 10px;
+    padding: 7px 10px;
     color: whitesmoke;
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
 }
+
+
 
 .edit, .delete{
     margin-left: 10px;
