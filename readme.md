@@ -6,6 +6,7 @@
 Project-ga ujeedkiisu Waa multi Users ay isticmaali karaan qof kaste ama urur kaste iyagoo qof ama urur kaste xogtiisu ay gaar utahay. Waxaan lagu maamulaa income, expense and Balance
 
 - [Abdulaahi Axmed Guuleed][https://github.com/abdalegurey]
+-[Nimao Saed Hussein][https://github.com/nimceya]
 
 ## Faa-iidooyinka uu Projectigaan Leeyahay
   - in UU Leyahay Authentication.
