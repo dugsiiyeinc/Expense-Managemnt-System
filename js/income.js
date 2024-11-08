@@ -1,3 +1,4 @@
+
 const form= document.querySelector("#form");
 const incomeamount = document.querySelector("#income-amount");
 const incomeSource = document.querySelector("#income-name");
@@ -115,7 +116,7 @@ incomeamount.value = "";
             <td>${income.source}</td>
             <td>${income.date}</td>
             <td class="income-amount">$${income.amount}</td>
-            <td><button class="edit" onclick="EditIncome(${income.id})">Edit</button></td>
+          
             <td><button class="delete" onclick="deleteIncome(${income.id})">Delete</button></td>
 
         </tr>
@@ -153,92 +154,11 @@ console.log("incomefilter",incomefilter)
  }
 
 
- function EditIncome(income) {
-     //console.log('Editing:', income);
-     const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income);
  
-    //  if (!incomeData) {
-    //      console.error('Income data not found for the given ID:', income);
-    //      Swal.fire({
-    //          title: "Error!",
-    //          text: "Income data not found!",
-    //          icon: "error",
-    //          confirmButtonText: "OK"
-    //      });
-    //      return;
-    //  }
- 
-   
-     incomeamount.value = incomeData.amount;
-     incomeSource.value = incomeData.source;
      incomedate.value = incomeData.date;
 
 
-     updateButton.addEventListener("click", (e) => {
-         e.preventDefault();
  
-         
-         if (incomeSource.value === '' || incomeamount.value === '' || incomedate.value === '') {
-             Swal.fire({
-                 title: "Error!",
-                 text: "Please fill all fields!",
-                 icon: "error",
-                 confirmButtonText: "Try again"
-             });
-             return;
-         }
- 
-        
-         incomeData.amount = incomeamount.value;
-         incomeData.source = incomeSource.value;
-         incomeData.date = incomedate.value;
- 
-        
-         updateDom(incomeData, incomeData.id);
-     });
- }
- function updateDom(incomeData, id) {
-   // console.log("incomedata", incomeData)
- 
-
-   
-    let allIncomeData = JSON.parse(localStorage.getItem('allIncomeData')) || {};
-    let userIncomes = allIncomeData[currentUser.fullname];
-
-   
-    let targetIncome = userIncomes.find(item => item.id === id);
-    if (targetIncome) {
-        targetIncome.amount = incomeData.amount;
-        targetIncome.source = incomeData.source;
-        targetIncome.date = incomeData.date;
-
-       
-        localStorage.setItem("allIncomeData", JSON.stringify(allIncomeData));
-
-        incomeSource.value='';
-        incomedate.value= '';
-        incomeamount.value=''; 
-
-    }
-
-  
-     tbody.innerHTML = ""; 
-
-   
-    allIncomeData[currentUser.fullname].forEach((income, index) => {
-        tbody.innerHTML += `
-            <tr>
-                <td>${index + 1}</td>
-                <td>${income.source}</td>
-                <td>${income.date}</td>
-                <td class="income-amount">$${income.amount}</td>
-                <td><button class="edit" onclick="EditIncome(${income.id})">Edit</button></td>
-            <td><button class="delete" onclick="deleteIncome(${income.id})">Delete</button></td>
-            </tr>
-        `;
-    });
-}
-
 
 const logouts = document.querySelectorAll("#logout");
 console.log(logouts);
@@ -248,13 +168,3 @@ logouts.forEach(logout => {
          window.location.href="../html/login.html"
     })
 })
-
-
-
-
-
-
-
-
-
-
