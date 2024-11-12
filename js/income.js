@@ -6,7 +6,7 @@ const incomedate= document.querySelector("#income-date");
 let userCurent = document.querySelector("#userCurent");
 let buttonincome= document.querySelector("#add-income");
 let updateButton= document.querySelector("#update-income");
-console.log(buttonincome)
+//console.log(buttonincome)
 
 
 
