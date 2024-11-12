@@ -15,11 +15,20 @@ loginForm.addEventListener('submit', (event)=>{
     //     alert('invalid credential');
     //     return;
     // }
+    if(email.value==='' || password.value===''){
+        Swal.fire({
+            title: "Error!",
+            text: "Please fill in all fields!",
+            icon: "error",
+            confirmButtonText: "Try again"
+          });
+        return;
+    }
 
     if(!user){
         Swal.fire({
             title: "Error!",
-            text: "Please fill in all fields!",
+            text: "Invlalid Credentials!",
             icon: "error",
             confirmButtonText: "Try again"
           });
