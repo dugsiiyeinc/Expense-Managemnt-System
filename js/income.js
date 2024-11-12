@@ -97,7 +97,7 @@ incomeamount.value = "";
     tbody.innerHTML = '';
 
     if (!allIncomeData || Object.keys(allIncomeData).length === 0 || !allIncomeData[currentUser.fullname]) {
-        tbody.innerHTML = '<tr><td colspan="4">No income data</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5">No income data</td></tr>';
         return;
     }
  
