@@ -121,6 +121,10 @@ header {
     min-width: 250px;
     max-width: 48%;
 }
+h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
 
 #logout{
     background-color: whitesmoke;

@@ -7,6 +7,10 @@
     margin-top: 90px;
    
 }
+h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
 
 .btn-yearly, .btn-Monthly, .btn-daily{
     padding: 10px 20px;
