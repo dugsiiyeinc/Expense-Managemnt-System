@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <nav class="navbar">
             
             <div class="logo">Expanses Tracker</div>
@@ -21,7 +21,20 @@
               
     
         </nav>
-    </header>
+    </header> -->
+
+    <nav class="navbar">
+      <h1 class="logo"> Expenses Tracker</h1>
+      <ul class="nav-links">
+        <button><a href="./Blog.html">Blog</a></button>
+        <button><a href="./html/register.html">Register</a></button>
+        <button><a href="./html/login.html">Login</a></button>
+                    
+
+      </ul>
+      <!-- <img src="./img/menu-btn.png" alt="" class="menu-btn"> -->
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWfKU53G_dKTqay0DwUdMIKDauowk5_Ruug&s" alt="" class="menu-btn">
+        </nav>
     <div>
         <section class="hero">
             <h1>Manage Your Expanses Easily</h1>
@@ -44,13 +57,13 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5rVzuSeQuOUDQP7_F0hu1JtPCz8UlfSNrVg&s"  alt="no img" id="img1">
                 <h4>Income and Expanses</h4>
                 <p>income and expanses managment system to organize and truck your expanses and all your transactions and record the debts</p>
-                <a href="" class="ctn">Learn More</a>
+                <a href="" class="ctn"id="ctn">Learn More</a>
             </div>
             <div class="col">
                 <img src="https://thumbs.dreamstime.com/b/understanding-income-vs-expenses-visual-guide-illustration-visually-explains-concept-helping-individuals-understand-323969598.jpg" alt="no img" id="img2">
                 <h4>Income and Expanses</h4>
                 <p>income and expanses managment system to organize and truck your expanses and all your transactions and record the debts</p>
-                <a href="" class="ctn">Learn More</a>
+                <a href="" class="ctn"id="ctn">Learn More</a>
             </div>
   
         </div>
@@ -60,7 +73,7 @@
         <div class="explore-content">
         <h1>Financial planning<br>No more hassle</h1>
         <p>make your life easier with comprehensive integration<br> support that allows financial planning to be more<br> seamless and delightful</p>
-        <a href="" class="ctn"   id="ctn">Learn More</a>
+        <a href="" class="ctn"   id="ctn last">Learn More</a>
     </div>
 
    
@@ -71,17 +84,17 @@
             <div class="col content-col">
                 <h1>Write All your Transactions and trucks them</h1>
                 <p> the transaction contains alist ofthe transaction and the transaction categorize by type income,expanses and can sort it by date <br>and from this screen the user can add transactions</p>
-                <a href="" class="ctn">Learn More</a>
+                <a href="" class="ctn" id="ctn last">Learn More</a>
             </div>
             <div class="col image-col">
                 <div class="image-gallery">
-                    <img src="https://cdn.cpa-in-chicago.com/wp-content/uploads/chicagoland-income-statement.jpg" alt="">
+                    <img src="https://cdn.cpa-in-chicago.com/wp-content/uploads/chicagoland-income-statement.jpg" alt="" id="imge1" >
 
-                    <img src="https://media.licdn.com/dms/image/v2/C4D12AQHPaiEhrTlALQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1639352780313?e=2147483647&v=beta&t=JpFt5Nac9bzVaBOStO9huIwAp17TTg0axknRSPEyhsg" alt="">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D12AQHPaiEhrTlALQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1639352780313?e=2147483647&v=beta&t=JpFt5Nac9bzVaBOStO9huIwAp17TTg0axknRSPEyhsg" alt="" id="imge2">
 
-                    <img src="https://muppin.com/wp-content/uploads/2019/12/2019-Income-Data.jpg" alt="">
+                    <img src="https://muppin.com/wp-content/uploads/2019/12/2019-Income-Data.jpg" alt="" id="imge3">
                     <img src="https://media.licdn.com/dms/image/D4D12AQF34eqppriNog/article-cover_image-shrink_600_2000/0/1683282271491?e=2147483647&v=beta&t=olnLUgbgbr4-lI7ixQ-F23M3bVZS8f3uGw8T1n8AS7U"
-" alt="">
+" alt="" id="imge4">
                 </div>
             </div>
         </div>
@@ -91,6 +104,12 @@
     <footer>
         <p>&copy; 2024 Expanses Tracker. All Rights Reserved </p>
     </footer>
-
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navlinks=document.querySelector('.nav-links');
+    menuBtn.addEventListener('click',()=>{
+        navlinks.classList.toggle('mobile-menu');
+    })
+</script>
 </body>
 </html>
