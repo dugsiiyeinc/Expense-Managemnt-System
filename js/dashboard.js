@@ -5,11 +5,23 @@ const userName = document.querySelector(".user")
 let totalincome= document.querySelector("#totalincome");
 let totalExpenses= document.querySelector("#totalExpenses");
 let balance = document.querySelector('#balance');
-console.log("totalincome")
-console.log("totalExpenses")
+//console.log("totalincome")
+//console.log("totalExpenses");
+
 let onlineUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+if(!onlineUser){
+
+    window.location.href = "../html/login.html";
+    
+  }else{
+     ///userCurent.textContent = currentUser.fullname;
+     userName.textContent = onlineUser.fullname;
+  
+  }
 console.log(userName)
-userName.textContent = onlineUser.fullname;
+
+
+
 let AllincomeUsers = JSON.parse(localStorage.getItem("allIncomeData")) ||{};
 let AllExpenseUsers = JSON.parse(localStorage.getItem("allExpenseData")) ||{};
 
@@ -83,6 +95,10 @@ logouts.forEach(logout => {
          window.location.href="../html/login.html"
     })
 })
+
+
+
+
 
 
 

@@ -3,14 +3,23 @@ let tbody= document.querySelector("#tbody");
 let allIncomeData= JSON.parse(localStorage.getItem("allIncomeData")) || {};
 
 let AllexpenseUser = JSON.parse(localStorage.getItem("allExpenseData")) || {};
-let onlineUsers = JSON.parse(localStorage.getItem("currentUser")) || [];
+let onlineUsers = JSON.parse(localStorage.getItem("currentUser")) || null;
+//console.log("Online users", onlineUsers)
 let user = document.querySelector(".user")
-if(!onlineUsers){
-    window.location.href="../html/login.html";
-}else{
-    user.innerHTML=onlineUsers.fullname;
-}
+// console.log("User", user)
 
+
+
+if(!onlineUsers){
+
+    window.location.href = "../html/login.html";
+    console.log("Login")
+    
+  }else{
+     ///userCurent.textContent = currentUser.fullname;
+     user.textContent = onlineUsers.fullname;
+  
+  }
 
 
 let incomeuserOnline= allIncomeData[onlineUsers.fullname] || [];
