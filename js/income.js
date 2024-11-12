@@ -155,16 +155,16 @@ console.log("incomefilter",incomefilter)
 
 
  
-     incomedate.value = incomeData.date;
+    // incomedate.value = incomeData.date;
 
 
  
 
-const logouts = document.querySelectorAll("#logout");
-console.log(logouts);
-logouts.forEach(logout => {
-    logout.addEventListener("click", () => {
-         localStorage.removeItem("currentUser");
-         window.location.href="../html/login.html"
-    })
-})
+     const logouts = document.querySelectorAll("#logout");
+     console.log(logouts);
+     logouts.forEach(logout => {
+         logout.addEventListener("click", () => {
+              localStorage.removeItem("currentUser");
+              window.location.href="../html/login.html"
+         })
+     })
