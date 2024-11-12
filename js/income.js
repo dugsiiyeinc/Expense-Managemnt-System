@@ -137,7 +137,7 @@ incomeamount.value = "";
  });
 
  function deleteIncome(income){
-    const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income);
+    const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income) ;
     
 let allIncomeDatadelete = JSON.parse(localStorage.getItem('allIncomeData')) || {};
 let incomefilter = allIncomeDatadelete[currentUser.fullname].filter(item => item.id!== income);

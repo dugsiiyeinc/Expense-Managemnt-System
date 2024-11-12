@@ -108,11 +108,15 @@ incomeOnlineuser.forEach(element => {
            return valuenumber = valuenumber + index;
        })
       totalExpenses.textContent = `$${totalExpense}`
+
+      document.getElementById('balance').textContent = `$${totalIncome-totalExpense}`;
       
 })
 //balance
 
-    document.getElementById('balance').textContent = `$${totalIncome-totalExpense}`;
+    //document.getElementById('balance').textContent = `$${totalIncome-totalExpense}`;
+    console.log("waa income and expense", totalExpense)
+     console.log("waa income and expense", totalIncome)
 
 
 
