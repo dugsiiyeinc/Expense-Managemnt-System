@@ -1,1 +1,0 @@
-# Dugsiiye Mentorship Developers
