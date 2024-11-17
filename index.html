@@ -5,23 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sample of landing page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
-    <!-- <header class="header">
-        <nav class="navbar">
-            
-            <div class="logo">Expanses Tracker</div>
-          
-              <ul>
-                <button><a href="./Blog.html">Blog</a></button>
-                   <button><a href="./html/register.html">Register</a></button>
-                    <button><a href="./html/login.html">Login</a></button>
-                    
-                </ul>
-              
     
-        </nav>
-    </header> -->
 
     <nav class="navbar">
       <h1 class="logo"> Expenses Tracker</h1>
@@ -83,7 +70,7 @@
         <div class="row">
             <div class="col content-col">
                 <h1>Write All your Transactions and trucks them</h1>
-                <p> the transaction contains alist ofthe transaction and the transaction categorize by type income,expanses and can sort it by date <br>and from this screen the user can add transactions</p>
+                <p> the transaction contains alist ofthe transaction and the transaction categorize by type income,expanses and can sort it by date <br> and from this screen the user can add transactions</p>
                 <a href="" class="ctn" id="ctn last">Learn More</a>
             </div>
             <div class="col image-col">
@@ -101,9 +88,61 @@
        
     </section>
 
+  
     <footer>
-        <p>&copy; 2024 Expanses Tracker. All Rights Reserved </p>
-    </footer>
+      <div class="container">
+          <div class="footer-grid">
+                
+                <div>
+                  <h3 class="text-lg">Company</h3>
+                  <ul class="space-y-2">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </div>
+                <div>
+                 
+                  <h3>Support</h3>
+                  <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Account</a></li>
+                  </ul>
+                </div>
+                
+             
+              <div>
+                  <h3 >Legal</h3>
+                  <ul class="footer-legal-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                  </ul>
+                </div>
+          
+              <div>
+                  <h3 >Connect with Us</h3>
+                  <div class="newsletter">
+                    <h4>Subscribe to our newsletter</h4>
+                    <form id="news-letter" class="footer-flex">
+                      <input type="email" placeholder="Enter your email" />
+                      <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                  </div>
+                </div>
+           </div>
+           
+           <div class="footer-bottom">
+              <p>&copy; 2024 Expenses Tracker. All Rights Reserved </p>
+            </div>
+      </div>
+  </footer>
+
+ 
 <script>
     const menuBtn = document.querySelector('.menu-btn');
     const navlinks=document.querySelector('.nav-links');
