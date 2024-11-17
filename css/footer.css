@@ -76,7 +76,8 @@ footer {
   } 
   @media(max-width:850px){
     .footer-grid {
-         grid-template-columns: repeat(1,1fr);
+         grid-template-columns: 1fr;
+        
        }
   }
   
