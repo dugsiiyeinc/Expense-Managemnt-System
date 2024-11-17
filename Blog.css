@@ -99,6 +99,8 @@ a{
 }
 
 .blogs-section{
+    width: 80%;
+   margin: auto;
    margin-top: 100px;
    color: black;
  
@@ -172,37 +174,3 @@ a{
 }
 
 
-
-@media (max-width: 992px) { /* Medium screens: Tablets */
-    .blogs {
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-    }
-
-    ul{
-        display: flex;
-        justify-content: space-between;
-        gap: 60px;
-     }
-
-     .blog-div img{
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 600px) { /* Small screens: Mobile */
-    .blogs {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-div img{
-        width: 100%;
-        height: auto;
-    }
-
-    ul{
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-     }
-}
