@@ -124,7 +124,14 @@ incomeOnlineuser.forEach(element => {
 
 
 
-
+const logouts = document.querySelectorAll("#logout");
+console.log(logouts);
+logouts.forEach(logout => {
+    logout.addEventListener("click", () => {
+         localStorage.removeItem("currentUser");
+         window.location.href="../html/login.html"
+    })
+})
 
 
 

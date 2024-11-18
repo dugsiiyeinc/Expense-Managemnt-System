@@ -7,10 +7,11 @@ let buttonexpense= document.querySelector("#addExpense");
 // let updateButton= document.querySelector("#update-expense");
 // console.log(buttonexpense)
 
+let users=JSON.parse(localStorage.getItem("users")) || [];
 
 let user = document.querySelector(".user");
 let CurrentUser= JSON.parse(localStorage.getItem("currentUser")) || {};
-let users=JSON.parse(localStorage.getItem("users")) || [];
+// let users=JSON.parse(localStorage.getItem("users")) || [];
 
 
 const currentUser= JSON.parse(localStorage.getItem("currentUser"));
