@@ -136,14 +136,14 @@ localStorage.setItem("allExpenseData", JSON.stringify(allExpenseData));
     tbody.innerHTML = '';
 
     if (!allExpenseData || Object.keys(allExpenseData).length === 0 || !allExpenseData[currentUser.fullname]) {
-        tbody.innerHTML = '<tr><td colspan="4">No expense data</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5">No expense data</td></tr>';
         return;
     }
  
   
 
     if (!userExpenseArray || userExpenseArray.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6">No expense data</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5">No expense data</td></tr>';
         return;
     }
     userExpenseArray.forEach((expense, index) => {

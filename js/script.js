@@ -5,6 +5,15 @@ const  loginForm = document.getElementById('loginForm');
 
 loginForm.addEventListener('submit', (event)=>{
     event.preventDefault();
+    if(email.value==='' || password.value===''){
+      Swal.fire({
+          title: "Error!",
+          text: "Please fill in all fields!",
+          icon: "error",
+          confirmButtonText: "Try again"
+        });
+      return;
+  }
 
 
     const users = JSON.parse(localStorage.getItem("users"));
@@ -15,11 +24,12 @@ loginForm.addEventListener('submit', (event)=>{
     //     alert('invalid credential');
     //     return;
     // }
+  
 
     if(!user){
         Swal.fire({
             title: "Error!",
-            text: "Please fill in all fields!",
+            text: "Invlalid Credentials!",
             icon: "error",
             confirmButtonText: "Try again"
           });

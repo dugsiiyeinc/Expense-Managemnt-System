@@ -6,7 +6,7 @@ const incomedate= document.querySelector("#income-date");
 let userCurent = document.querySelector("#userCurent");
 let buttonincome= document.querySelector("#add-income");
 let updateButton= document.querySelector("#update-income");
-console.log(buttonincome)
+//console.log(buttonincome)
 
 
 
@@ -97,7 +97,7 @@ incomeamount.value = "";
     tbody.innerHTML = '';
 
     if (!allIncomeData || Object.keys(allIncomeData).length === 0 || !allIncomeData[currentUser.fullname]) {
-        tbody.innerHTML = '<tr><td colspan="4">No income data</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5">No income data</td></tr>';
         return;
     }
  
@@ -137,7 +137,7 @@ incomeamount.value = "";
  });
 
  function deleteIncome(income){
-    const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income);
+    const incomeData = allIncomeData[currentUser.fullname].find(item => item.id === income) ;
     
 let allIncomeDatadelete = JSON.parse(localStorage.getItem('allIncomeData')) || {};
 let incomefilter = allIncomeDatadelete[currentUser.fullname].filter(item => item.id!== income);
@@ -155,16 +155,16 @@ console.log("incomefilter",incomefilter)
 
 
  
-     incomedate.value = incomeData.date;
+    // incomedate.value = incomeData.date;
 
 
  
 
-const logouts = document.querySelectorAll("#logout");
-console.log(logouts);
-logouts.forEach(logout => {
-    logout.addEventListener("click", () => {
-         localStorage.removeItem("currentUser");
-         window.location.href="../html/login.html"
-    })
-})
+     const logouts = document.querySelectorAll("#logout");
+     console.log(logouts);
+     logouts.forEach(logout => {
+         logout.addEventListener("click", () => {
+              localStorage.removeItem("currentUser");
+              window.location.href="../html/login.html"
+         })
+     })
