@@ -33,7 +33,7 @@ header{
 }
 .navbar .logo{
     
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     font-weight: bold;
     font-family: system-ui;
 }
@@ -79,6 +79,7 @@ background-position: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top:83px;
 
 }
 
@@ -197,6 +198,8 @@ a{
         font-size: 16px;
     }
 }
+
+
 
 @media (max-width: 480px) {
     /* .sectionblog {
