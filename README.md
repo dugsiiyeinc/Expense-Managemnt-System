@@ -14,9 +14,6 @@ Project-ga ujeedkiisu Waa multi Users ay isticmaali karaan qof kaste ama urur ka
   - In UU User Kaste Uu Heli Karo Reports Sida Mid Maalinle ah, Mid Bille Ah , Iyo Mid SanadLe Ah
 
 
-Markii hore ujeedku wuxuu ahaa in lagu tijaabiyo  kooras Afsommali ku baxaya oo lagu baranayo Git iyo Github sida ay u shaqeeyaan.
-
-This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
 
 ## Technologies used
 
